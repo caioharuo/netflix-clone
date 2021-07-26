@@ -1,0 +1,157 @@
+:root {
+  --red: #e50914;
+  --black: #141414;
+  --gray: #e5e5e5;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--white);
+}
+
+header .container {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.4s ease;
+}
+
+.container {
+  padding: 20px;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav li {
+  margin-right: 10px;
+}
+
+header nav li:last-child {
+  margin-right: 0px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--gray);
+  transition: color 0.4s;
+}
+
+header nav a:hover {
+  color: #b3b3b3;
+}
+
+.active {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.active:hover {
+  color: inherit;
+  cursor: default;
+}
+
+.filme-principal {
+  background-image: linear-gradient(#00000033, #000000b3 100%),
+    url('../img/case-breaking-bad.jpg');
+  background-size: cover;
+  background-position: center;
+
+  height: 95vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.filme-principal .container {
+  width: 70%;
+  margin-bottom: 60px;
+}
+
+.filme-principal .titulo {
+  background-image: url('../img/logo-breaking-bad.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: fit-content;
+  height: 40vw;
+  max-height: 150px;
+}
+
+.filme-principal .descricao {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+.botoes {
+  display: flex;
+}
+
+.botao {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+
+  padding: 16px 24px;
+  margin-right: 15px;
+
+  cursor: pointer;
+
+  transition: 0.4s ease;
+  transition-property: background, color;
+}
+
+.botao.play {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.botao.info {
+  background-color: #6d6d6eb3;
+  color: var(--white);
+}
+
+.botao:focus-visible {
+  outline: 2px solid var(--white);
+  border-radius: 2px;
+}
+
+.botao i {
+  margin-right: 5px;
+}
+
+.botao.play:hover {
+  background-color: #ffffffbf;
+}
+
+.botao.info:hover {
+  background-color: #6d6d6e66;
+}
+
+.box-filme {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.carrosel-filmes {
+  margin-top: 5px;
+}
